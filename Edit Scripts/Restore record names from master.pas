@@ -20,7 +20,7 @@ begin
     Exit;
   
   // if record overrides several masters, then get the last one
-  if OverrideCount(m) > 1 then
+  if MasterCount(m) > 1 then
     m := OverrideByIndex(m, OverrideCount(m) - 2);
 
   if not SameText(GetElementEditValues(e, 'FULL'), GetElementEditValues(m, 'FULL')) then
